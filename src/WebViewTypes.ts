@@ -288,6 +288,7 @@ export interface IOSNativeWebViewProps extends CommonNativeWebViewProps {
   allowsInlineMediaPlayback?: boolean;
   allowsLinkPreview?: boolean;
   automaticallyAdjustContentInsets?: boolean;
+  allowUniversalAccessFromFileURLs?: boolean;
   bounces?: boolean;
   contentInset?: ContentInsetProp;
   contentInsetAdjustmentBehavior?: ContentInsetAdjustmentBehavior;
@@ -491,6 +492,14 @@ export interface IOSWebViewProps extends WebViewSharedProps {
    * @platform ios
    */
   allowingReadAccessToURL?: string;
+
+  /**
+   * Boolean that sets whether JavaScript running in the context of a file
+   * scheme URL should be allowed to access content from any origin.
+   * Including accessing content from other file scheme URLs
+   * @platform ios
+   */
+  allowUniversalAccessFromFileURLs?: boolean;
 
   /**
    * Function that is invoked when the WebKit WebView content process gets terminated.
